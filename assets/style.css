@@ -1,0 +1,330 @@
+@import url("https://fonts.googleapis.com/css?family=Heebo:200,400,700&display=swap&subset=hebrew");
+@import url("https://fonts.googleapis.com/css?family=Ibarra+Real+Nova:700&display=swap");
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body *,
+body ::before,
+body ::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Heebo", sans-serif;
+}
+
+body {
+  background: #141b22 url(/assets/img/bg.png) top center/100% auto no-repeat fixed;
+}
+
+main section.landing {
+  min-height: 100vh;
+  width: 100vw;
+}
+
+main section.landing header {
+  height: 20vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 50px 20px;
+}
+
+@media screen and (min-width: 1200px) {
+  main section.landing header {
+    padding: 50px;
+  }
+}
+
+main section.landing header a {
+  max-width: 45%;
+  max-height: 100%;
+}
+
+main section.landing header img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+main section.landing header .logo2 {
+  width: 160px;
+}
+
+main section.landing header .logo3 {
+  width: 260px;
+}
+
+main section.landing .window-to-yeshivah {
+  height: 60vh;
+}
+
+main section.landing .window-to-yeshivah img.yeshiva,
+main section.landing .window-to-yeshivah img.window,
+main section.landing .window-to-yeshivah .mask {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+
+main section.landing .window-to-yeshivah .mask {
+  height: 43%;
+  max-width: 75%;
+  -webkit-mask: url(/assets/img/mask.png) center/contain no-repeat;
+          mask: url(/assets/img/mask.png) center/contain no-repeat;
+}
+
+main section.landing .window-to-yeshivah .mask img.yeshiva {
+  -o-object-fit: cover;
+     object-fit: cover;
+  bottom: -200px;
+  -webkit-animation: pan 23s ease-in-out 0s infinite alternate;
+          animation: pan 23s ease-in-out 0s infinite alternate;
+}
+
+main section.landing .window-to-yeshivah img.window {
+  -o-object-fit: contain;
+     object-fit: contain;
+  max-width: 90%;
+  height: 60%;
+}
+
+@-webkit-keyframes pan {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    left: 0px;
+  }
+  to {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    left: -1000px;
+  }
+}
+
+@keyframes pan {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    left: 0px;
+  }
+  to {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    left: -1000px;
+  }
+}
+
+main section.landing .text h1 {
+  text-align: center;
+  font-size: 42px;
+  font-weight: 400;
+  color: #c3d3e2;
+}
+
+main section.landing .text svg.arrow {
+  display: block;
+  margin: 30px auto;
+  fill: #4e6070;
+  cursor: pointer;
+  -webkit-transition: all 0.25s ease-in;
+  transition: all 0.25s ease-in;
+}
+
+main section.landing .text svg.arrow:hover {
+  -webkit-transform: translateY(10px) scale(1.1);
+          transform: translateY(10px) scale(1.1);
+  fill: #c3d3e2;
+}
+
+main section.info {
+  padding: 80px 0 0 0;
+}
+
+main section.info .frame {
+  position: relative;
+  background: url(/assets/img/frame.png) top no-repeat;
+  text-align: center;
+  padding: 360px 140px 80px 140px;
+  height: 1500px;
+  width: 900px;
+  max-width: 90%;
+  margin: auto;
+  z-index: 5;
+  overflow: auto;
+}
+
+@media screen and (max-width: 850px) {
+  main section.info .frame {
+    max-width: 95%;
+    padding: 360px 40px 80px 40px;
+  }
+}
+
+@media screen and (max-width: 735px) {
+  main section.info .frame {
+    max-width: 100%;
+    padding: 360px 10px 80px 10px;
+  }
+}
+
+main section.info .frame img.logo {
+  position: absolute;
+  top: 30px;
+  width: 300px;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+
+main section.info .frame ul li {
+  font-weight: 100;
+  font-size: 18px;
+}
+
+.relative {
+  position: relative;
+}
+
+.relative .bottom-bg-img {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  max-height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -2;
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(45%, black));
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), black 45%);
+          mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(45%, black));
+          mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), black 45%);
+}
+
+.serif {
+  font-family: "Ibarra Real Nova", serif;
+  letter-spacing: 0.04em;
+}
+
+.thin {
+  font-weight: 200;
+}
+
+.b {
+  font-weight: bold;
+}
+
+.xl {
+  font-size: 36px;
+}
+
+.l {
+  font-size: 22px;
+}
+
+.brand {
+  color: #263248;
+}
+
+h1 {
+  font-size: 44px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: #263248;
+  margin: 6px 0 4px 0;
+}
+
+p {
+  font-size: 18px;
+}
+
+p,
+ul,
+li {
+  line-height: 1.4;
+  list-style: none;
+}
+
+.no-break {
+  white-space: nowrap;
+}
+
+img.divider {
+  margin: 12px auto 8px;
+}
+
+img.inline {
+  display: inline-block;
+  margin: 0 6px;
+}
+
+@media screen and (max-width: 450px) {
+  img.inline {
+    display: none;
+  }
+}
+
+.flipX {
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+
+.box {
+  display: inline-block;
+  background: linear-gradient(45deg, #40627c, #263248);
+  padding: 4px 16px;
+  border-radius: 8px;
+  margin: 20px auto;
+}
+
+.gold {
+  display: inline-block;
+  background: linear-gradient(45deg, #ece789 0%, #cc9349 26%, #ece789 53%, #cc9349 69%, #ece789 84%, #cc9349 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  line-height: 1.2em;
+  -webkit-box-shadow: inset 0 -2px 0 #658ead;
+          box-shadow: inset 0 -2px 0 #658ead;
+  color: #263248;
+}
+
+a:hover {
+  color: #658ead;
+  border-color: #263248;
+  -webkit-box-shadow: inset 0 -3px 0 #263248;
+          box-shadow: inset 0 -3px 0 #263248;
+}
+
+.m-2 {
+  margin: 12px 0 !important;
+}
+/*# sourceMappingURL=style.css.map */

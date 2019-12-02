@@ -1,0 +1,278 @@
+$mobile: 735px;
+$tablet: 850px;
+$desktop: 1200px;
+
+$blue: rgb(38, 50, 72);
+$light-blue: rgb(64, 98, 124);
+$light-light-blue: rgb(101, 142, 173);
+
+@import url("https://fonts.googleapis.com/css?family=Heebo:200,400,700&display=swap&subset=hebrew");
+@import url("https://fonts.googleapis.com/css?family=Ibarra+Real+Nova:700&display=swap");
+body {
+  box-sizing: border-box;
+  *,
+  ::before,
+  ::after {
+    box-sizing: border-box;
+    font-family: "Heebo", sans-serif;
+  }
+}
+
+body {
+  background: #141b22 url(/assets/img/bg.png) top center / 100% auto no-repeat fixed;
+}
+
+main {
+  section.landing {
+    min-height: 100vh;
+    width: 100vw;
+
+    header {
+      height: 20vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 50px 20px;
+      @media screen and (min-width: $desktop) {
+        padding: 50px;
+      }
+      a {
+        max-width: 45%;
+        max-height: 100%;
+      }
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+      .logo2 {
+        width: 160px;
+      }
+      .logo3 {
+        width: 260px;
+      }
+    }
+
+    .window-to-yeshivah {
+      height: 60vh;
+      img.yeshiva,
+      img.window,
+      .mask {
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        user-select: none;
+        -webkit-user-drag: none;
+        -khtml-user-drag: none;
+        -moz-user-drag: none;
+        -o-user-drag: none;
+        user-drag: none;
+      }
+
+      .mask {
+        height: 43%;
+        max-width: 75%;
+        mask: url(/assets/img/mask.png) center / contain no-repeat;
+        img.yeshiva {
+          object-fit: cover;
+          bottom: -200px;
+          animation: pan 23s ease-in-out 0s infinite alternate;
+        }
+      }
+      img.window {
+        object-fit: contain;
+        max-width: 90%;
+        height: 60%;
+        // background: url(/assets/img/yeshiva.jpg) top center / contain no-repeat fixed;
+      }
+
+      @keyframes pan {
+        from {
+          transform: scale(1);
+          left: 0px;
+          // bottom: 0px;
+        }
+        to {
+          transform: scale(1.1);
+          left: -1000px;
+          // bottom: -200px;
+        }
+      }
+    }
+
+    .text {
+      // position: absolute;
+      // bottom: 6%;
+      // left: 0;
+      // right: 0;
+      // width: 100%;
+      h1 {
+        text-align: center;
+        font-size: 42px;
+        font-weight: 400;
+        color: #c3d3e2;
+      }
+      svg.arrow {
+        display: block;
+        margin: 30px auto;
+        fill: #4e6070;
+        cursor: pointer;
+        transition: all 0.25s ease-in;
+        &:hover {
+          transform: translateY(10px) scale(1.1);
+          fill: #c3d3e2;
+        }
+      }
+    }
+  }
+  section.info {
+    padding: 80px 0 0 0;
+    .frame {
+      position: relative;
+      background: url(/assets/img/frame.png) top no-repeat;
+      text-align: center;
+      padding: 360px 140px 80px 140px;
+      height: 1500px;
+      width: 900px;
+      max-width: 90%;
+      margin: auto;
+      z-index: 5;
+      overflow: auto;
+
+      @media screen and (max-width: $tablet) {
+        max-width: 95%;
+        padding: 360px 40px 80px 40px;
+      }
+      @media screen and (max-width: $mobile) {
+        max-width: 100%;
+        padding: 360px 10px 80px 10px;
+      }
+      img.logo {
+        position: absolute;
+        top: 30px;
+        width: 300px;
+        margin: auto;
+        left: 0;
+        right: 0;
+      }
+      ul {
+        li {
+          font-weight: 100;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+.relative {
+  position: relative;
+  .bottom-bg-img {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    z-index: -2;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), black 45%);
+  }
+}
+
+// UTILS
+.serif {
+  font-family: "Ibarra Real Nova", serif;
+  letter-spacing: 0.04em;
+}
+.thin {
+  font-weight: 200;
+}
+.b {
+  font-weight: bold;
+}
+.xl {
+  font-size: 36px;
+}
+.l {
+  font-size: 22px;
+}
+.brand {
+  color: $blue;
+}
+h1 {
+  font-size: 44px;
+}
+h1,
+h2,
+h3,
+h4 {
+  color: $blue;
+  margin: 6px 0 4px 0;
+}
+p {
+  font-size: 18px;
+}
+p,
+ul,
+li {
+  line-height: 1.4;
+  list-style: none;
+}
+.no-break {
+  white-space: nowrap;
+}
+img.divider {
+  margin: 12px auto 8px;
+}
+img.inline {
+  display: inline-block;
+  margin: 0 6px;
+  @media screen and (max-width: 450px) {
+    display: none;
+  }
+}
+.flipX {
+  transform: scaleX(-1);
+}
+.box {
+  display: inline-block;
+  background: linear-gradient(45deg, $light-blue, $blue);
+  padding: 4px 16px;
+  border-radius: 8px;
+  margin: 20px auto;
+}
+.gold {
+  display: inline-block;
+  background: linear-gradient(
+    45deg,
+    rgba(236, 231, 137, 1) 0%,
+    rgba(204, 147, 73, 1) 26%,
+    rgba(236, 231, 137, 1) 53%,
+    rgba(204, 147, 73, 1) 69%,
+    rgba(236, 231, 137, 1) 84%,
+    rgba(204, 147, 73, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  transition: all 0.4s;
+  line-height: 1.2em;
+  // border-bottom: 1px solid $light-blue;
+  box-shadow: inset 0 -2px 0 $light-light-blue;
+  color: $blue;
+  &:hover {
+    color: $light-light-blue;
+    border-color: $blue;
+    box-shadow: inset 0 -3px 0 $blue;
+  }
+}
+.m-2 {
+  margin: 12px 0 !important;
+}
