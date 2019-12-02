@@ -13,6 +13,10 @@ body ::after {
   font-family: "Heebo", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: #141b22 url(/assets/img/bg.png) top center/100% auto no-repeat fixed;
 }
@@ -305,7 +309,7 @@ img.inline {
   -webkit-text-fill-color: transparent;
 }
 
-a {
+a:not(.no-fx) {
   position: relative;
   display: inline-block;
   text-decoration: none;
@@ -317,7 +321,7 @@ a {
   color: #263248;
 }
 
-a:hover {
+a:not(.no-fx):hover {
   color: #658ead;
   border-color: #263248;
   -webkit-box-shadow: inset 0 -3px 0 #263248;

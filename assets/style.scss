@@ -18,6 +18,10 @@ body {
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: #141b22 url(/assets/img/bg.png) top center / 100% auto no-repeat fixed;
 }
@@ -258,7 +262,7 @@ img.inline {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-a {
+a:not(.no-fx) {
   position: relative;
   display: inline-block;
   text-decoration: none;
