@@ -30,7 +30,9 @@
       <div class="window-to-yeshivah">
 
         <div class="mask">
-          <video id="video" src="./assets/yeshiva.mp4" autoplay loop></video>
+          <video id="video" loop>
+            <source src="./assets/yeshiva.mp4" type="video/mp4">
+          </video>
           <!-- <img class="yeshiva" src="./assets/img/yeshiva.jpg"> -->
         </div>
         <img class="window" src="./assets/img/window.png">
@@ -149,6 +151,10 @@
       video.muted = !video.muted
       g.innerHTML = video.muted ? x : v;
     })
+
+    window.addEventListener('DOMContentLoaded', function () {
+      video.play()
+    });
 
     let logo = document.getElementById('logo');
     let arrow = document.getElementById('scroll');
