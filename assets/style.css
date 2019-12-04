@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Heebo:200,400,700&display=swap&subset=hebrew");
+@import url("https://fonts.googleapis.com/css?family=Heebo:100,400,700&display=swap&subset=hebrew");
 @import url("https://fonts.googleapis.com/css?family=Ibarra+Real+Nova:700&display=swap");
 body {
   -webkit-box-sizing: border-box;
@@ -27,6 +27,10 @@ main section.landing {
 }
 
 main section.landing header {
+  position: -webkit-sticky;
+  position: sticky;
+  width: 100%;
+  top: 0;
   height: 20vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -66,45 +70,6 @@ main section.landing header .logo3 {
 
 main section.landing .window-to-yeshivah {
   height: 60vh;
-}
-
-main section.landing .window-to-yeshivah .icon {
-  position: absolute;
-  margin: auto;
-  left: 0;
-  right: 0;
-  max-width: 90%;
-  height: 60%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-main section.landing .window-to-yeshivah .icon svg#mute {
-  cursor: pointer;
-  background: #1d3144;
-  padding: 6px;
-  border-radius: 50%;
-  -webkit-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
-  -webkit-box-shadow: 0 0 0 1px #eae888;
-          box-shadow: 0 0 0 1px #eae888;
-}
-
-main section.landing .window-to-yeshivah .icon svg#mute #primary,
-main section.landing .window-to-yeshivah .icon svg#mute #secondary {
-  fill: #c3d3e2;
-}
-
-main section.landing .window-to-yeshivah .icon svg#mute:hover, main section.landing .window-to-yeshivah .icon svg#mute:focus {
-  -webkit-box-shadow: 0 0 0 3px #e29a44;
-          box-shadow: 0 0 0 3px #e29a44;
 }
 
 main section.landing .window-to-yeshivah img.yeshiva,
@@ -154,52 +119,87 @@ main section.landing .window-to-yeshivah img.window {
   height: 60%;
 }
 
-@-webkit-keyframes pan {
-  from {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    left: 0px;
-  }
-  to {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-    left: -1000px;
-  }
-}
-
-@keyframes pan {
-  from {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    left: 0px;
-  }
-  to {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-    left: -1000px;
-  }
-}
-
 main section.landing .text h1 {
   text-align: center;
   font-size: 42px;
-  font-weight: 400;
+  font-weight: 200;
   color: #c3d3e2;
 }
 
-main section.landing .text svg.arrow {
-  display: block;
-  margin: 30px auto;
+main section.landing .text .controls {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main section.landing .text .controls .btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main section.landing .text .controls .btns svg.arrow {
+  margin: 0 12px;
   fill: #4e6070;
   cursor: pointer;
   -webkit-transition: all 0.25s ease-in;
   transition: all 0.25s ease-in;
+  -webkit-animation: move-down 1s linear 0s infinite;
+          animation: move-down 1s linear 0s infinite;
 }
 
-main section.landing .text svg.arrow:hover {
+main section.landing .text .controls .btns svg.arrow:hover {
   -webkit-transform: translateY(10px) scale(1.1);
           transform: translateY(10px) scale(1.1);
   fill: #c3d3e2;
+}
+
+main section.landing .text .controls .btns .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main section.landing .text .controls .btns .icon svg {
+  cursor: pointer;
+  background: #1d3144;
+  padding: 6px;
+  border-radius: 50%;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  -webkit-box-shadow: 0 0 0 1px #eae888;
+          box-shadow: 0 0 0 1px #eae888;
+}
+
+main section.landing .text .controls .btns .icon svg.play.animate {
+  -webkit-animation: pulse 2s linear 0s infinite;
+          animation: pulse 2s linear 0s infinite;
+}
+
+main section.landing .text .controls .btns .icon svg #primary,
+main section.landing .text .controls .btns .icon svg #secondary {
+  fill: #c3d3e2;
+}
+
+main section.landing .text .controls .btns .icon svg:hover, main section.landing .text .controls .btns .icon svg:focus {
+  -webkit-box-shadow: 0 0 0 3px #e29a44;
+          box-shadow: 0 0 0 3px #e29a44;
 }
 
 main section.info {
@@ -271,7 +271,7 @@ main section.info .frame ul li {
 }
 
 .thin {
-  font-weight: 200 !important;
+  font-weight: 100 !important;
 }
 
 .b {
@@ -374,5 +374,99 @@ a:not(.no-fx):hover {
 
 .m-2 {
   margin: 12px 0 !important;
+}
+
+@-webkit-keyframes pan {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    left: 0px;
+  }
+  to {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    left: -1000px;
+  }
+}
+
+@keyframes pan {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    left: 0px;
+  }
+  to {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    left: -1000px;
+  }
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 1px #c3d3e2;
+            box-shadow: 0 0 0 1px #c3d3e2;
+  }
+  30% {
+    -webkit-box-shadow: 0 0 0 15px #c3d3e234, 0 0 0 1px #e29a44;
+            box-shadow: 0 0 0 15px #c3d3e234, 0 0 0 1px #e29a44;
+  }
+  70% {
+    -webkit-box-shadow: 0 0 0 25px #c3d3e200, 0 0 0 14px #e29b4442;
+            box-shadow: 0 0 0 25px #c3d3e200, 0 0 0 14px #e29b4442;
+  }
+  to {
+    -webkit-box-shadow: 0 0 0 25px #c3d3e200, 0 0 0 25px #e29b4400;
+            box-shadow: 0 0 0 25px #c3d3e200, 0 0 0 25px #e29b4400;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 1px #c3d3e2;
+            box-shadow: 0 0 0 1px #c3d3e2;
+  }
+  30% {
+    -webkit-box-shadow: 0 0 0 15px #c3d3e234, 0 0 0 1px #e29a44;
+            box-shadow: 0 0 0 15px #c3d3e234, 0 0 0 1px #e29a44;
+  }
+  70% {
+    -webkit-box-shadow: 0 0 0 25px #c3d3e200, 0 0 0 14px #e29b4442;
+            box-shadow: 0 0 0 25px #c3d3e200, 0 0 0 14px #e29b4442;
+  }
+  to {
+    -webkit-box-shadow: 0 0 0 25px #c3d3e200, 0 0 0 25px #e29b4400;
+            box-shadow: 0 0 0 25px #c3d3e200, 0 0 0 25px #e29b4400;
+  }
+}
+
+@-webkit-keyframes move-down {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  35% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes move-down {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  35% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
 }
 /*# sourceMappingURL=style.css.map */

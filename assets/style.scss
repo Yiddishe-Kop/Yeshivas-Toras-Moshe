@@ -6,7 +6,7 @@ $blue: rgb(38, 50, 72);
 $light-blue: rgb(64, 98, 124);
 $light-light-blue: rgb(101, 142, 173);
 
-@import url("https://fonts.googleapis.com/css?family=Heebo:200,400,700&display=swap&subset=hebrew");
+@import url("https://fonts.googleapis.com/css?family=Heebo:100,400,700&display=swap&subset=hebrew");
 @import url("https://fonts.googleapis.com/css?family=Ibarra+Real+Nova:700&display=swap");
 body {
   box-sizing: border-box;
@@ -32,6 +32,10 @@ main {
     width: 100vw;
 
     header {
+      position: sticky;
+      width: 100%;
+      top: 0;
+
       height: 20vh;
       display: flex;
       align-items: center;
@@ -58,34 +62,6 @@ main {
     }
 
     .window-to-yeshivah {
-      .icon {
-        position: absolute;
-        margin: auto;
-        left: 0;
-        right: 0;
-        max-width: 90%;
-        height: 60%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        svg#mute {
-          cursor: pointer;
-          background: #1d3144;
-          padding: 6px;
-          border-radius: 50%;
-          transition: all 0.3s ease-in;
-          box-shadow: 0 0 0 1px #eae888;
-          #primary,
-          #secondary {
-            fill: #c3d3e2;
-          }
-          &:hover,
-          &:focus {
-            // transform: scale(1.05);
-            box-shadow: 0 0 0 3px #e29a44;
-          }
-        }
-      }
       height: 60vh;
       img.yeshiva,
       img.window,
@@ -124,42 +100,59 @@ main {
         height: 60%;
         // background: url(/assets/img/yeshiva.jpg) top center / contain no-repeat fixed;
       }
-
-      @keyframes pan {
-        from {
-          transform: scale(1);
-          left: 0px;
-          // bottom: 0px;
-        }
-        to {
-          transform: scale(1.1);
-          left: -1000px;
-          // bottom: -200px;
-        }
-      }
     }
 
     .text {
-      // position: absolute;
-      // bottom: 6%;
-      // left: 0;
-      // right: 0;
-      // width: 100%;
       h1 {
         text-align: center;
         font-size: 42px;
-        font-weight: 400;
+        font-weight: 200;
         color: #c3d3e2;
       }
-      svg.arrow {
-        display: block;
-        margin: 30px auto;
-        fill: #4e6070;
-        cursor: pointer;
-        transition: all 0.25s ease-in;
-        &:hover {
-          transform: translateY(10px) scale(1.1);
-          fill: #c3d3e2;
+      .controls {
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .btns {
+          display: flex;
+          align-items: center;
+          svg.arrow {
+            margin: 0 12px;
+            fill: #4e6070;
+            cursor: pointer;
+            transition: all 0.25s ease-in;
+            animation: move-down 1s linear 0s infinite;
+            &:hover {
+              transform: translateY(10px) scale(1.1);
+              fill: #c3d3e2;
+            }
+          }
+          .icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            svg {
+              cursor: pointer;
+              background: #1d3144;
+              padding: 6px;
+              border-radius: 50%;
+              transition: all 0.3s ease-in;
+              box-shadow: 0 0 0 1px #eae888;
+              &.play.animate {
+                animation: pulse 2s linear 0s infinite;
+              }
+              #primary,
+              #secondary {
+                fill: #c3d3e2;
+              }
+              &:hover,
+              &:focus {
+                // transform: scale(1.05);
+                box-shadow: 0 0 0 3px #e29a44;
+              }
+            }
+          }
         }
       }
     }
@@ -222,7 +215,7 @@ main {
   letter-spacing: 0.04em;
 }
 .thin {
-  font-weight: 200 !important;
+  font-weight: 100 !important;
 }
 .b {
   font-weight: bold;
@@ -311,4 +304,44 @@ a:not(.no-fx) {
 }
 .m-2 {
   margin: 12px 0 !important;
+}
+@keyframes pan {
+  from {
+    transform: scale(1);
+    left: 0px;
+    // bottom: 0px;
+  }
+  to {
+    transform: scale(1.1);
+    left: -1000px;
+    // bottom: -200px;
+  }
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 1px #c3d3e2;
+  }
+
+  30% {
+    box-shadow: 0 0 0 15px #c3d3e234, 0 0 0 1px #e29a44;
+  }
+
+  70% {
+    box-shadow: 0 0 0 25px #c3d3e200, 0 0 0 14px #e29b4442;
+  }
+
+  to {
+    box-shadow: 0 0 0 25px #c3d3e200, 0 0 0 25px #e29b4400;
+  }
+}
+@keyframes move-down {
+  0% {
+    transform: translateY(0px);
+  }
+  35% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }

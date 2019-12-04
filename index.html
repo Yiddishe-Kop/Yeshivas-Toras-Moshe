@@ -36,38 +36,55 @@
           <!-- <img class="yeshiva" src="./assets/img/yeshiva.jpg"> -->
         </div>
         <img class="window" src="./assets/img/window.png">
-
-        <div class="icon" id="tap-to-play">
-          <svg id="mute" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="34"
-            height="34" viewBox="0 0 24 24">
-            <g id="icon-volume">
-              <path id="primary"
-                d="M4.586,13H1a1,1,0,0,1-1-1V6A1,1,0,0,1,1,5H4.586L9.293.295A1,1,0,0,1,11,1V17a1,1,0,0,1-1.707.707Z"
-                transform="translate(2 2.998)" />
-              <path id="secondary"
-                d="M3.121,14.435a1,1,0,0,1,0-1.414,8,8,0,0,0,0-11.314A1,1,0,0,1,4.535.293a10,10,0,0,1,0,14.143,1,1,0,0,1-1.414,0ZM.293,11.606a1,1,0,0,1,0-1.414,4,4,0,0,0,0-5.657A1,1,0,0,1,1.707,3.121a6,6,0,0,1,0,8.485,1,1,0,0,1-1.415,0Z"
-                transform="translate(14.536 4.636)" />
-            </g>
-          </svg>
-        </div>
       </div>
 
       <div class="text">
         <h1 class="thin">Come join your friends and reconnect!</h1>
-        <svg class="arrow" width="42" height="42" viewBox="0 0 24 24" id="scroll">
-          <g clip-path="url(#clip0)">
-            <path
-              d="M12 22C9.34784 22 6.80432 20.9464 4.92896 19.0711C3.05359 17.1957 2 14.6522 2 12C2 9.34784 3.05359 6.8043 4.92896 4.92893C6.80432 3.05357 9.34784 2 12 2C14.6522 2 17.1957 3.05357 19.071 4.92893C20.9464 6.8043 22 9.34784 22 12C22 14.6522 20.9464 17.1957 19.071 19.0711C17.1957 20.9464 14.6522 22 12 22ZM12 20C14.1217 20 16.1564 19.1571 17.6567 17.6569C19.157 16.1566 20 14.1217 20 12C20 9.87827 19.157 7.84344 17.6567 6.34315C16.1564 4.84286 14.1217 4 12 4C9.87827 4 7.84355 4.84286 6.34326 6.34315C4.84297 7.84344 4 9.87827 4 12C4 14.1217 4.84297 16.1566 6.34326 17.6569C7.84355 19.1571 9.87827 20 12 20Z" />
-            <path d="M-3538 -44H-3438V56H-3538V-44Z" />
-            <path
-              d="M15.2 10.2C15.3926 10.0556 15.6308 9.98545 15.8709 10.0025C16.111 10.0196 16.3369 10.1227 16.5072 10.2929C16.6774 10.4631 16.7804 10.689 16.7974 10.9291C16.8145 11.1692 16.7446 11.4074 16.6002 11.6L12.6002 15.6C12.4132 15.7832 12.1617 15.8859 11.9 15.8859C11.6382 15.8859 11.387 15.7832 11.2 15.6L7.20003 11.6C7.0556 11.4074 6.98545 11.1692 7.00252 10.9291C7.01958 10.689 7.12283 10.4631 7.29304 10.2929C7.46326 10.1227 7.68916 10.0196 7.92927 10.0025C8.16938 9.98545 8.4076 10.0556 8.60017 10.2L11.9 13.49L15.2 10.19V10.2Z" />
-          </g>
-          <defs>
-            <clipPath id="clip0">
-              <rect width="42" height="42" fill="white" />
-            </clipPath>
-          </defs>
-        </svg>
+        <div class="controls">
+          <div class="btns">
+
+            <div class="icon" id="tap-to-play">
+              <svg class="play animate" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="34" height="34" viewBox="0 0 24 24">
+                <g id="icon-play">
+                  <path id="secondary"
+                    d="M10.9,5.263a1.674,1.674,0,0,1,0,2.871L2.535,13.155A1.674,1.674,0,0,1,0,11.72V1.676A1.674,1.674,0,0,1,2.535.241Z"
+                    transform="translate(6.641 5.302)" />
+                </g>
+              </svg>
+            </div>
+
+            <svg class="arrow" width="42" height="42" viewBox="0 0 24 24" id="scroll">
+              <g clip-path="url(#clip0)">
+                <path
+                  d="M12 22C9.34784 22 6.80432 20.9464 4.92896 19.0711C3.05359 17.1957 2 14.6522 2 12C2 9.34784 3.05359 6.8043 4.92896 4.92893C6.80432 3.05357 9.34784 2 12 2C14.6522 2 17.1957 3.05357 19.071 4.92893C20.9464 6.8043 22 9.34784 22 12C22 14.6522 20.9464 17.1957 19.071 19.0711C17.1957 20.9464 14.6522 22 12 22ZM12 20C14.1217 20 16.1564 19.1571 17.6567 17.6569C19.157 16.1566 20 14.1217 20 12C20 9.87827 19.157 7.84344 17.6567 6.34315C16.1564 4.84286 14.1217 4 12 4C9.87827 4 7.84355 4.84286 6.34326 6.34315C4.84297 7.84344 4 9.87827 4 12C4 14.1217 4.84297 16.1566 6.34326 17.6569C7.84355 19.1571 9.87827 20 12 20Z" />
+                <path d="M-3538 -44H-3438V56H-3538V-44Z" />
+                <path
+                  d="M15.2 10.2C15.3926 10.0556 15.6308 9.98545 15.8709 10.0025C16.111 10.0196 16.3369 10.1227 16.5072 10.2929C16.6774 10.4631 16.7804 10.689 16.7974 10.9291C16.8145 11.1692 16.7446 11.4074 16.6002 11.6L12.6002 15.6C12.4132 15.7832 12.1617 15.8859 11.9 15.8859C11.6382 15.8859 11.387 15.7832 11.2 15.6L7.20003 11.6C7.0556 11.4074 6.98545 11.1692 7.00252 10.9291C7.01958 10.689 7.12283 10.4631 7.29304 10.2929C7.46326 10.1227 7.68916 10.0196 7.92927 10.0025C8.16938 9.98545 8.4076 10.0556 8.60017 10.2L11.9 13.49L15.2 10.19V10.2Z" />
+              </g>
+              <defs>
+                <clipPath id="clip0">
+                  <rect width="42" height="42" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+
+
+            <div class="icon">
+              <svg id="mute" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="34"
+                height="34" viewBox="0 0 24 24">
+                <g id="icon-volume">
+                  <path id="primary"
+                    d="M4.586,13H1a1,1,0,0,1-1-1V6A1,1,0,0,1,1,5H4.586L9.293.295A1,1,0,0,1,11,1V17a1,1,0,0,1-1.707.707Z"
+                    transform="translate(2 2.998)" />
+                  <path id="secondary"
+                    d="M3.121,14.435a1,1,0,0,1,0-1.414,8,8,0,0,0,0-11.314A1,1,0,0,1,4.535.293a10,10,0,0,1,0,14.143,1,1,0,0,1-1.414,0ZM.293,11.606a1,1,0,0,1,0-1.414,4,4,0,0,0,0-5.657A1,1,0,0,1,1.707,3.121a6,6,0,0,1,0,8.485,1,1,0,0,1-1.415,0Z"
+                    transform="translate(14.536 4.636)" />
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
 
       </div>
 
@@ -137,9 +154,15 @@
 
   <script>
     let playBtn = document.getElementById('tap-to-play');
+    let playBtnSvgToAnimate = document.querySelector('svg.play');
     let video = document.getElementById('video');
     let muteBtn = document.getElementById('mute');
-    let g = document.getElementById('icon-volume');
+    let gMute = document.getElementById('icon-volume');
+    let gPlay = document.getElementById('icon-play');
+    let playSvg = `<path id="secondary"
+                    d="M10.9,5.263a1.674,1.674,0,0,1,0,2.871L2.535,13.155A1.674,1.674,0,0,1,0,11.72V1.676A1.674,1.674,0,0,1,2.535.241Z"
+                    transform="translate(6.641 5.302)" />`
+    let pauseSvg = `<path id="secondary" d="M8.5,12a1,1,0,0,1-1-1V1a1,1,0,0,1,1-1H11a1,1,0,0,1,1,1V11a1,1,0,0,1-1,1ZM1,12a1,1,0,0,1-1-1V1A1,1,0,0,1,1,0H3.5a1,1,0,0,1,1,1V11a1,1,0,0,1-1,1Z" transform="translate(6 6)"/>`;
     let x = `<path id="primary" d="M4.586,13H1a1,1,0,0,1-1-1V6A1,1,0,0,1,1,5H4.586L9.293.295A1,1,0,0,1,11,1V17a1,1,0,0,1-1.707.707Z" transform="translate(2 2.998)"/>
     <path id="secondary" d="M2.086,3.5.293,1.707A1,1,0,0,1,1.707.293L3.5,2.086,5.293.293A1,1,0,0,1,6.707,1.707L4.914,3.5,6.707,5.293A1,1,0,0,1,5.293,6.707L3.5,4.914,1.707,6.707A1,1,0,0,1,.293,5.293Z" transform="translate(15 8.5)"/>`;
     let v = `<path id="primary"
@@ -151,7 +174,7 @@
     muteBtn.addEventListener('click', function (e) {
       e.stopPropagation();
       video.muted = !video.muted
-      g.innerHTML = video.muted ? x : v;
+      gMute.innerHTML = video.muted ? x : v;
     })
 
     function isVideoPlaying() {
@@ -161,14 +184,20 @@
     playBtn.addEventListener('click', function () {
       if (isVideoPlaying()) {
         video.pause()
+        gPlay.innerHTML = playSvg
+        playBtnSvgToAnimate.classList.add('animate')
       } else {
         video.play()
+        gPlay.innerHTML = pauseSvg
+        playBtnSvgToAnimate.classList.remove('animate')
       }
     })
 
     window.addEventListener('DOMContentLoaded', function () {
       try {
         video.play()
+        gPlay.innerHTML = pauseSvg
+        playBtnSvgToAnimate.classList.remove('animate')
       } catch (error) {
         alert(error)
       }
