@@ -167,7 +167,11 @@
     })
 
     window.addEventListener('DOMContentLoaded', function () {
-      video.play()
+      try {
+        video.play()
+      } catch (error) {
+        alert(error)
+      }
     });
 
     let logo = document.getElementById('logo');
