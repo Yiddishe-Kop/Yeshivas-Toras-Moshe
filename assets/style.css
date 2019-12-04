@@ -68,6 +68,45 @@ main section.landing .window-to-yeshivah {
   height: 60vh;
 }
 
+main section.landing .window-to-yeshivah .icon {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  max-width: 90%;
+  height: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main section.landing .window-to-yeshivah .icon svg#mute {
+  cursor: pointer;
+  background: #1d3144;
+  padding: 6px;
+  border-radius: 50%;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  -webkit-box-shadow: 0 0 0 1px #eae888;
+          box-shadow: 0 0 0 1px #eae888;
+}
+
+main section.landing .window-to-yeshivah .icon svg#mute #primary,
+main section.landing .window-to-yeshivah .icon svg#mute #secondary {
+  fill: #c3d3e2;
+}
+
+main section.landing .window-to-yeshivah .icon svg#mute:hover, main section.landing .window-to-yeshivah .icon svg#mute:focus {
+  -webkit-box-shadow: 0 0 0 3px #e29a44;
+          box-shadow: 0 0 0 3px #e29a44;
+}
+
 main section.landing .window-to-yeshivah img.yeshiva,
 main section.landing .window-to-yeshivah img.window,
 main section.landing .window-to-yeshivah .mask {
@@ -101,6 +140,11 @@ main section.landing .window-to-yeshivah .mask img.yeshiva {
   bottom: -200px;
   -webkit-animation: pan 23s ease-in-out 0s infinite alternate;
           animation: pan 23s ease-in-out 0s infinite alternate;
+}
+
+main section.landing .window-to-yeshivah .mask video {
+  min-width: 100%;
+  height: 100%;
 }
 
 main section.landing .window-to-yeshivah img.window {
@@ -227,7 +271,7 @@ main section.info .frame ul li {
 }
 
 .thin {
-  font-weight: 200;
+  font-weight: 200 !important;
 }
 
 .b {

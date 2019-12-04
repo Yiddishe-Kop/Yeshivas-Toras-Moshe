@@ -58,6 +58,34 @@ main {
     }
 
     .window-to-yeshivah {
+      .icon {
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
+        max-width: 90%;
+        height: 60%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg#mute {
+          cursor: pointer;
+          background: #1d3144;
+          padding: 6px;
+          border-radius: 50%;
+          transition: all 0.3s ease-in;
+          box-shadow: 0 0 0 1px #eae888;
+          #primary,
+          #secondary {
+            fill: #c3d3e2;
+          }
+          &:hover,
+          &:focus {
+            // transform: scale(1.05);
+            box-shadow: 0 0 0 3px #e29a44;
+          }
+        }
+      }
       height: 60vh;
       img.yeshiva,
       img.window,
@@ -84,6 +112,10 @@ main {
           object-fit: cover;
           bottom: -200px;
           animation: pan 23s ease-in-out 0s infinite alternate;
+        }
+        video {
+          min-width: 100%;
+          height: 100%;
         }
       }
       img.window {
@@ -190,7 +222,7 @@ main {
   letter-spacing: 0.04em;
 }
 .thin {
-  font-weight: 200;
+  font-weight: 200 !important;
 }
 .b {
   font-weight: bold;
