@@ -9,6 +9,7 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
   <link rel="stylesheet" href="./assets/style.css">
+  <link rel="stylesheet" href="https://use.typekit.net/dhe8aek.css">
 </head>
 
 <body>
@@ -95,56 +96,59 @@
       <div class="frame">
         <img class="logo" id="logo" src="./assets/img/logo.png" alt="Yeshivas Toras Moshe Yarchei Kallah Logo"
           loading="lazy">
+        <div class="content">
 
-        <h2 class="thin xl">Yeshivas Toras Moshe</h2>
-        <div class="box">
-          <h1 class="gold">Yarchei Kallah</h1>
+
+          <h2 class="thin xl">Yeshivas Toras Moshe</h2>
+          <div class="box">
+            <h1 class="gold">Yarchei Kallah</h1>
+          </div>
+          <h2>in our Beis Medrash in Yerushalayim</h2>
+          <p class="l">President’s Day Weekend, from Thursday, February 13th<br>
+            until Tuesday, February 18th, 2020</p>
+
+          <img class="divider" src="./assets/img/divider.png" height="16px">
+
+          <h1 class="serif brand no-break"><img class="inline flipX" src="./assets/img/itur.svg">HIGHLIGHTS<img
+              class="inline" src="./assets/img/itur.svg"></h1>
+
+          <h2 class="name">Rabbi Shurkin, Shlita</h2>
+          <p>Morning seder and shiur specially designed for the Yarchei Kallah</p>
+          <h2 class="name">Rabbi Weiner, Shlita</h2>
+          <p>Practical Halacha including Shailos U'Tshuvos L'Maaseh</p>
+          <h2 class="name">Special programming featuring the Rosh Yeshiva,
+            Mashgiach, and other Rebbeim</h2>
+
+          <img class="divider" src="./assets/img/divider.png" height="16px">
+
+          <h3>For more information please contact:</h3>
+
+          <ul>
+            <li>
+              Chairman, R’ Netanel Dancykier; <a href="mailto:panamadental@gmail.com">panamadental@gmail.com</a>
+            </li>
+            <li>
+              R’ Saadia Zakarin; <a href="mailto:szakarin@kingzak.com">szakarin@kingzak.com</a>
+            </li>
+            <li>
+              R’ Betzalel Dalezman; <a href="mailto:leondalezman@gmail.com">leondalezman@gmail.com</a>
+            </li>
+            <li>
+              R’ Chaim Ambinder; <a href="mailto:danielambinder@gmail.com">danielambinder@gmail.com</a>
+            </li>
+            <li>
+              R’ Daniel Cohen; <a href="mailto:edmcohen@gmail.com">edmcohen@gmail.com</a>
+            </li>
+          </ul>
+
+          <img class="divider" src="./assets/img/divider.png" height="16px">
+
+          <h4 class="medium">For confirmation and coordinating chavrusos
+            including options for learning with Rebbeim, meishivim, and avreichim:</h4>
+          <h2 class="m-2">Rabbi Moshe Chaim Jacobowitz</h2>
+          <a href="mailto:moshe.c.jacobowitz@gmail.com">moshe.c.jacobowitz@gmail.com</a>
+
         </div>
-        <h2>in our Beis Medrash in Yerushalayim</h2>
-        <p class="l">President’s Day Weekend, from Thursday February 13th<br>
-          until Tuesday February 18th, 2020**</p>
-
-        <img class="divider" src="./assets/img/divider.png" height="16px">
-
-        <h1 class="serif brand no-break"><img class="inline flipX" src="./assets/img/itur.svg">HIGHLIGHTS<img
-            class="inline" src="./assets/img/itur.svg"></h1>
-
-        <h2 class="name">Rabbi Shurkin Shlita</h2>
-        <p>morning seder and shiur specially designed for the yarchei kallah</p>
-        <h2 class="name">Rabbi Weiner Shlita</h2>
-        <p>Practical Halacha including shailos u'tshuvos l'maaseh</p>
-        <h2 class="name">Special programming featuring the Rosh Yeshiva
-          Mashgiach, and other Rebbeim</h2>
-
-        <img class="divider" src="./assets/img/divider.png" height="16px">
-
-        <h4>For more information please contact:</h4>
-
-        <ul>
-          <li>
-            Chairman, R’ Netanel Dancykier; <a href="mailto:panamadental@gmail.com">panamadental@gmail.com</a>
-          </li>
-          <li>
-            R’ Saadia Zakarin; <a href="mailto:szakarin@kingzak.com">szakarin@kingzak.com</a>
-          </li>
-          <li>
-            R’ Betzalel Dalezman; <a href="mailto:leondalezman@gmail.com">leondalezman@gmail.com</a>
-          </li>
-          <li>
-            R’ Chaim Ambinder; <a href="mailto:danielambinder@gmail.com">danielambinder@gmail.com</a>
-          </li>
-          <li>
-            R’ Daniel Cohen; <a href="mailto:edmcohen@gmail.com">edmcohen@gmail.com</a>
-          </li>
-        </ul>
-
-        <img class="divider" src="./assets/img/divider.png" height="16px">
-
-        <h4>For confirmation and coordinating chavrusos
-          including options for learning with Rebbeim, meishivim, and avreichim:</h4>
-        <h2 class="m-2">Rabbi Moshe Chaim Jacobowitz</h2>
-        <a href="mailto:moshe.c.jacobowitz@gmail.com">moshe.c.jacobowitz@gmail.com</a>
-
       </div>
     </section>
   </main>
@@ -197,7 +201,7 @@
       try {
         video.play()
         gPlay.innerHTML = pauseSvg
-        playBtnSvgToAnimate.classList.remove('animate')
+        // playBtnSvgToAnimate.classList.remove('animate')
       } catch (error) {
         alert(error)
       }

@@ -15,6 +15,7 @@ body {
   ::after {
     box-sizing: border-box;
     font-family: "Heebo", sans-serif;
+    font-weight: 100;
   }
 }
 
@@ -29,6 +30,9 @@ body {
 main {
   header {
     position: sticky;
+    @media screen and (max-width: 1200px) {
+      position: initial;
+    }
     width: 100%;
     top: 0;
 
@@ -121,7 +125,7 @@ main {
             fill: #4e6070;
             cursor: pointer;
             transition: all 0.25s ease-in;
-            animation: move-down 1s linear 0s infinite;
+            // animation: move-down 1s linear 0s infinite;
             &:hover {
               transform: translateY(10px) scale(1.1);
               fill: #c3d3e2;
@@ -162,22 +166,34 @@ main {
       position: relative;
       background: url(/assets/img/frame.png) top no-repeat;
       text-align: center;
-      padding: 360px 140px 80px 140px;
       height: 1500px;
       width: 900px;
       max-width: 90%;
       margin: auto;
+      padding-top: 220px;
       z-index: 5;
-      overflow: auto;
-
       @media screen and (max-width: $tablet) {
         max-width: 95%;
-        padding: 360px 40px 80px 40px;
+        padding: 220px 0 0 0;
       }
       @media screen and (max-width: $mobile) {
         max-width: 100%;
-        padding: 360px 10px 80px 10px;
+        padding: 220px 0 0 0;
       }
+      .content {
+        padding: 140px 140px 10px 140px;
+        height: 100%;
+        overflow: auto;
+        @media screen and (max-width: $tablet) {
+          max-width: 95%;
+          padding: 140px 40px 10px 40px;
+        }
+        @media screen and (max-width: $mobile) {
+          max-width: 100%;
+          padding: 140px 10px 10px 10px;
+        }
+      }
+
       img.logo {
         position: absolute;
         top: 30px;
@@ -212,6 +228,15 @@ main {
 .serif {
   font-family: "Ibarra Real Nova", serif;
   letter-spacing: 0.04em;
+  font-family: yrsa, serif;
+  // font-weight: 600;
+  font-style: normal;
+}
+.deco {
+  font-family: rosella-deco, sans-serif;
+}
+.medium {
+  font-weight: 300 !important;
 }
 .thin {
   font-weight: 100 !important;
@@ -231,10 +256,16 @@ main {
 h1 {
   font-size: 44px;
 }
+h2 {
+  font-size: 28px;
+}
 h1,
 h2,
 h3,
 h4 {
+  font-family: yrsa, serif;
+  font-weight: 600;
+  font-style: normal;
   color: $blue;
   margin: 6px 0 4px 0;
 }
@@ -246,6 +277,12 @@ ul,
 li {
   line-height: 1.4;
   list-style: none;
+}
+ul {
+  padding: 0;
+}
+li {
+  margin-bottom: 12px;
 }
 .no-break {
   white-space: nowrap;
@@ -265,26 +302,30 @@ img.inline {
 }
 .box {
   display: inline-block;
-  background: linear-gradient(45deg, $light-blue, $blue);
+  // background: linear-gradient(45deg, $light-blue, $blue);
   padding: 4px 16px;
   border-radius: 8px;
   margin: 20px auto;
 }
 .gold {
   display: inline-block;
-  background: linear-gradient(
-    45deg,
-    rgba(236, 231, 137, 1) 0%,
-    rgba(204, 147, 73, 1) 26%,
-    rgba(236, 231, 137, 1) 53%,
-    rgba(204, 147, 73, 1) 69%,
-    rgba(236, 231, 137, 1) 84%,
-    rgba(204, 147, 73, 1) 100%
-  );
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  // background: linear-gradient(
+  //   45deg,
+  //   rgba(236, 231, 137, 1) 0%,
+  //   rgba(204, 147, 73, 1) 26%,
+  //   rgba(236, 231, 137, 1) 53%,
+  //   rgba(204, 147, 73, 1) 69%,
+  //   rgba(236, 231, 137, 1) 84%,
+  //   rgba(204, 147, 73, 1) 100%
+  // );
+  // -webkit-background-clip: text;
+  // -moz-background-clip: text;
+  // background-clip: text;
+  // -webkit-text-fill-color: transparent;
+  font-family: rosella-deco, sans-serif;
+  font-size: 38px;
+  font-weight: 400;
+  font-style: normal;
 }
 a:not(.no-fx) {
   position: relative;
