@@ -161,6 +161,8 @@ main section.landing .text .controls .btns svg.arrow {
   cursor: pointer;
   -webkit-transition: all 0.25s ease-in;
   transition: all 0.25s ease-in;
+  -webkit-animation: move-down 1s linear 0s infinite;
+          animation: move-down 1s linear 0s infinite;
 }
 
 main section.landing .text .controls .btns svg.arrow:hover {
