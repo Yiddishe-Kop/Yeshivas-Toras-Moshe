@@ -226,14 +226,14 @@ main section.info .frame {
 @media screen and (max-width: 850px) {
   main section.info .frame {
     max-width: 95%;
-    padding: 220px 0 0 0;
+    padding: 360px 0 0 0;
   }
 }
 
 @media screen and (max-width: 735px) {
   main section.info .frame {
     max-width: 100%;
-    padding: 220px 0 0 0;
+    padding: 360px 0 0 0;
   }
 }
 
@@ -246,14 +246,14 @@ main section.info .frame .content {
 @media screen and (max-width: 850px) {
   main section.info .frame .content {
     max-width: 95%;
-    padding: 140px 40px 10px 40px;
+    padding: 40px 40px 10px 40px;
   }
 }
 
 @media screen and (max-width: 735px) {
   main section.info .frame .content {
     max-width: 100%;
-    padding: 140px 10px 10px 10px;
+    padding: 40px 10px 10px 10px;
   }
 }
 
