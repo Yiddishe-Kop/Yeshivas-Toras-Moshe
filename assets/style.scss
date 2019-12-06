@@ -120,8 +120,13 @@ main {
         .btns {
           display: flex;
           align-items: center;
+          position: relative;
           svg.arrow {
-            margin: 0 12px;
+            position: absolute;
+            top: 40px;
+            margin: 0 auto;
+            right: 0;
+            left: 0;
             fill: #4e6070;
             cursor: pointer;
             transition: all 0.25s ease-in;
@@ -132,6 +137,7 @@ main {
             }
           }
           .icon {
+            margin: 0 6px;
             display: flex;
             align-items: center;
             justify-content: center;

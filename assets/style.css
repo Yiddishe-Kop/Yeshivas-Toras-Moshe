@@ -153,10 +153,15 @@ main section.landing .text .controls .btns {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
 main section.landing .text .controls .btns svg.arrow {
-  margin: 0 12px;
+  position: absolute;
+  top: 40px;
+  margin: 0 auto;
+  right: 0;
+  left: 0;
   fill: #4e6070;
   cursor: pointer;
   -webkit-transition: all 0.25s ease-in;
@@ -172,6 +177,7 @@ main section.landing .text .controls .btns svg.arrow:hover {
 }
 
 main section.landing .text .controls .btns .icon {
+  margin: 0 6px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
