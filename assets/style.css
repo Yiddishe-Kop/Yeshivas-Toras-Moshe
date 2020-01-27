@@ -25,6 +25,7 @@ body {
 main header {
   position: -webkit-sticky;
   position: sticky;
+  z-index: 999;
   width: 100%;
   top: 0;
   height: 20vh;
@@ -75,13 +76,30 @@ main section.landing {
   width: 100vw;
 }
 
+main section.landing .hidden {
+  visibility: hidden;
+}
+
 main section.landing .window-to-yeshivah {
   height: 60vh;
 }
 
-main section.landing .window-to-yeshivah img.yeshiva,
-main section.landing .window-to-yeshivah img.window,
-main section.landing .window-to-yeshivah .mask {
+main section.landing .window-to-yeshivah .first-video {
+  margin: 32px auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+main section.landing .window-to-yeshivah .first-video video {
+  max-width: 100%;
+  max-height: 600px;
+  border-radius: 12px;
+}
+
+main section.landing .window-to-yeshivah .second-video img.yeshiva,
+main section.landing .window-to-yeshivah .second-video img.window,
+main section.landing .window-to-yeshivah .second-video .mask {
   position: absolute;
   margin: auto;
   left: 0;
@@ -99,14 +117,14 @@ main section.landing .window-to-yeshivah .mask {
   user-drag: none;
 }
 
-main section.landing .window-to-yeshivah .mask {
+main section.landing .window-to-yeshivah .second-video .mask {
   height: 43%;
   max-width: 75%;
   -webkit-mask: url(/assets/img/mask.png) center/contain no-repeat;
           mask: url(/assets/img/mask.png) center/contain no-repeat;
 }
 
-main section.landing .window-to-yeshivah .mask img.yeshiva {
+main section.landing .window-to-yeshivah .second-video .mask img.yeshiva {
   -o-object-fit: cover;
      object-fit: cover;
   bottom: -200px;
@@ -114,12 +132,12 @@ main section.landing .window-to-yeshivah .mask img.yeshiva {
           animation: pan 23s ease-in-out 0s infinite alternate;
 }
 
-main section.landing .window-to-yeshivah .mask video {
+main section.landing .window-to-yeshivah .second-video .mask video {
   min-width: 100%;
   height: 100%;
 }
 
-main section.landing .window-to-yeshivah img.window {
+main section.landing .window-to-yeshivah .second-video img.window {
   -o-object-fit: contain;
      object-fit: contain;
   max-width: 90%;
@@ -524,5 +542,87 @@ a:not(.no-fx):hover {
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
   }
+}
+
+@-webkit-keyframes zoomOutUp {
+  40% {
+    opacity: 1;
+    -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+            transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+            animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -2000px, 0);
+            transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -2000px, 0);
+    -webkit-transform-origin: center bottom;
+            transform-origin: center bottom;
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+            animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  }
+}
+
+@keyframes zoomOutUp {
+  40% {
+    opacity: 1;
+    -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+            transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+            animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -2000px, 0);
+            transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -2000px, 0);
+    -webkit-transform-origin: center bottom;
+            transform-origin: center bottom;
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+            animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  }
+}
+
+.zoomOutUp {
+  -webkit-animation: zoomOutUp 1s;
+          animation: zoomOutUp 1s;
+}
+
+@-webkit-keyframes zoomInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0);
+            transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+            animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+            transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+            animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  }
+}
+
+@keyframes zoomInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0);
+            transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+            animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+            transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+            animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  }
+}
+
+.zoomInUp {
+  -webkit-animation-name: zoomInUp 1s;
+          animation-name: zoomInUp 1s;
 }
 /*# sourceMappingURL=style.css.map */

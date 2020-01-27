@@ -30,16 +30,25 @@
 
       <div class="window-to-yeshivah">
 
-        <div class="mask">
-          <video id="video" loop>
-            <source src="./assets/yeshiva.mp4" type="video/mp4">
+        <div class="first-video" id="first-video">
+          <video id="trailer" controls autoplay>
+            <source src="./assets/RabbiWeinerTrailer.mp4" type="video/mp4">
           </video>
-          <!-- <img class="yeshiva" src="./assets/img/yeshiva.jpg"> -->
         </div>
-        <img class="window" src="./assets/img/window.png">
+
+        <div class="second-video hidden" id="second-video">
+          <div class="mask">
+            <video id="video" loop>
+              <source src="./assets/yeshiva.mp4" type="video/mp4">
+            </video>
+            <!-- <img class="yeshiva" src="./assets/img/yeshiva.jpg"> -->
+          </div>
+          <img class="window" src="./assets/img/window.png">
+        </div>
+
       </div>
 
-      <div class="text">
+      <div class="text hidden">
         <h1 class="thin">Come join your friends and reconnect!</h1>
         <div class="controls">
           <div class="btns">
@@ -159,7 +168,15 @@
   <script>
     let playBtn = document.getElementById('tap-to-play');
     let playBtnSvgToAnimate = document.querySelector('svg.play');
+
+    // grab sections
+    let video1 = document.getElementById('first-video');
+    let video2 = document.getElementById('second-video');
+    let textSection = document.querySelector('.text');
+
+    let trailer = document.getElementById('trailer');
     let video = document.getElementById('video');
+
     let muteBtn = document.getElementById('mute');
     let gMute = document.getElementById('icon-volume');
     let gPlay = document.getElementById('icon-play');
@@ -199,13 +216,27 @@
 
     window.addEventListener('DOMContentLoaded', function () {
       try {
-        video.play()
+        trailer.play()
         // gPlay.innerHTML = pauseSvg
         // playBtnSvgToAnimate.classList.remove('animate')
       } catch (error) {
         alert(error)
       }
     });
+
+    trailer.addEventListener('ended', function (e) {
+      video1.classList.add('zoomOutUp')
+      setTimeout(() => {
+        video1.classList.add('hidden')
+        video2.classList.remove('hidden')
+        textSection.classList.remove('hidden')
+        try {
+          video.play()
+        } catch (error) {
+          alert(error)
+        }
+      }, 1000);
+    })
 
     let logo = document.getElementById('logo');
     let arrow = document.getElementById('scroll');
