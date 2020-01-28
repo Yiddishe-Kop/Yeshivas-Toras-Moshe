@@ -147,6 +147,17 @@ main {
     }
 
     .text {
+      text-align: center;
+      button {
+        padding: 4px 14px;
+        border-radius: 8px;
+        background-color: #eae888;
+        border: none;
+        cursor: pointer;
+        &:hover {
+          box-shadow: 0 0 0 2px #c3d3e2;
+        }
+      }
       h1 {
         text-align: center;
         font-size: 42px;

@@ -53,6 +53,9 @@
       </div>
 
       <div class="text hidden">
+
+        <button onclick="replayTrailer()">Replay Trailer</button>
+
         <h1 class="thin">Come join your friends and reconnect!</h1>
         <div class="controls">
           <div class="btns">
@@ -246,6 +249,14 @@
       trailer.play()
       let svgBtn = document.querySelector('svg.video-overlay-play-button')
       svgBtn.remove()
+    }
+
+    function replayTrailer() {
+      video.pause()
+      video1.classList.remove('hidden', 'zoomOutUp')
+      video2.classList.add('hidden')
+      textSection.classList.add('hidden')
+      trailer.play()
     }
 
     let logo = document.getElementById('logo');
