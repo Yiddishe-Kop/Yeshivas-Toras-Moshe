@@ -31,9 +31,13 @@
       <div class="window-to-yeshivah">
 
         <div class="first-video" id="first-video">
-          <video id="trailer" controls autoplay>
+          <video id="trailer" poster="./assets/img/poster.png" controls autoplay>
             <source src="./assets/RabbiWeinerTrailer.mp4" type="video/mp4">
           </video>
+          <svg onclick="toggleVideo1()" class="video-overlay-play-button" viewBox="0 0 200 200" alt="Play video">
+            <circle cx="100" cy="100" r="90" fill="none" stroke-width="15" stroke="#fff" />
+            <polygon points="70, 55 70, 145 145, 100" fill="#fff" />
+          </svg>
         </div>
 
         <div class="second-video hidden" id="second-video">
@@ -237,6 +241,12 @@
         }
       }, 1000);
     })
+
+    function toggleVideo1() {
+      trailer.play()
+      let svgBtn = document.querySelector('svg.video-overlay-play-button')
+      svgBtn.remove()
+    }
 
     let logo = document.getElementById('logo');
     let arrow = document.getElementById('scroll');
